@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <ctype.h>
+#include <pilha.c>
+
+int valor (char *e) {
+    Pilha P = pilha(256);
+    for (int i = 0; e[i]; i++)
+    if(isdigit(e[i]))
+    empilha(e[i]-'0', P);
+    else{
+         int y = desempilha(P);
+         int x = desempilha(P);
+         switch(e[i]) {
+                      case '+': empilha(x+y); break;
+                      case '-': empilha(x-y); break;
+                      case '*': empilha(x*y); break;
+                      case '/': empilha(x/y); break;
+                      }
+         }
+         int z = desempilha(P);
+         destroip(&P);
+         return z;
+         
+}
