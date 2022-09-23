@@ -26,3 +26,12 @@ float z = desempilha(P);
 destriop(&P);
 return z;
 }
+
+float main(){
+    Pilha P = pilha(256);
+    printf("Infixa: ");
+    gets(e);
+    Printf("Posfixa %s\n\n: ", posfixa(e));
+    return 0;
+    
+}
