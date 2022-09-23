@@ -19,6 +19,15 @@ int valor (char *e) {
          }
          int z = desempilha(P);
          destroip(&P);
-         return z;
-         
+         return z; 
+}
+
+int main(){
+    char e[256];
+    Pilha P = pilha(256);
+    printf("Infixa: ");
+    gets(e);
+    Printf("Posfixa %s\n\n: ", posfixa(e));
+    return 0;
+    
 }
