@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-#include <pilha.c>
+#include "../cap3/pilha.c"
 
 float valor(char *e) {
     Pilha P = pilha(256);
