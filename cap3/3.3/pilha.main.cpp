@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
-#include <pilha.c>
+#include "../cap3/pilha.c"
 
 int prio(char o){
     switch(o){
