@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <ctype.h>
-#include <pilha.c>
+#include "../cap3/pilha.c"
 
 int valor (char *e) {
     Pilha P = pilha(256);
@@ -29,5 +29,4 @@ int main(){
     gets(e);
     Printf("Posfixa %s\n\n: ", posfixa(e));
     return 0;
-    
-}
+    }
