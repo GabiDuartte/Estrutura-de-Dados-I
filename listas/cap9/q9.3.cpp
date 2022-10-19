@@ -5,7 +5,7 @@
 
 using namespace std;
 
-typedef int Item;
+typedef char Item;
 typedef struct no{
     Item item;
     struct no *prox;
@@ -39,20 +39,22 @@ void destroi(Lista *L){
     }
 }
 
-void inversa(Lista L){
-    if(L == NULL) return;
-    inversa(L->prox);
-    printf(fmt, L->item);
+void ultimo(Lista L){
+    while(L != NULL){
+        if(L->prox == NULL){
+            printf(fmt, L->item);
+        }
+        L = L->prox;
+    }
 }
 
 int main(){
     Lista l;
-
-    l = inclue(2, NULL);
-    l = inclue(9, l);
-    l = inclue(7, l);
+    l = inclue("c", NULL);
+    l = inclue("b", l);
+    l = inclue("a", l);
 
     exibe(l);
-    printf("\nInverso: ");
-    inversa(l);
+    printf("\nUltimo elemento: ");
+    ultimo(l);
 }
