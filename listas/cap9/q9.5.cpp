@@ -41,7 +41,7 @@ void destroi(Lista *L){
 
 int soma(Lista L){
     if(L == NULL) return 0;
-    return L->item + soma(Lista->prox);
+    return L->item + soma(L->prox);
 }
 
 int main(){
