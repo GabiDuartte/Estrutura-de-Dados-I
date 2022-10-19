@@ -5,7 +5,7 @@
 
 using namespace std;
 
-typedef char Item;
+typedef int Item;
 typedef struct no{
     Item item;
     struct no *prox;
@@ -50,9 +50,9 @@ void ultimo(Lista L){
 
 int main(){
     Lista l;
-    l = inclue("c", NULL);
-    l = inclue("b", l);
-    l = inclue("a", l);
+    l = inclue(3, NULL);
+    l = inclue(2, l);
+    l = inclue(1, l);
 
     exibe(l);
     printf("\nUltimo elemento: ");
