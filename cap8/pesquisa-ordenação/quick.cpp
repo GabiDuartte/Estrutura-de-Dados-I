@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<iostream>
+#define troca(a,b) {int x=a; a=b; b=x;}
 using namespace std;
 void Quick(int vetor[10], int inicio, int fim);
 
@@ -14,10 +15,21 @@ int main(){
    printf("\n");
 }
 
+int particiona(int v[], int inicio, int fim){
+   int x = v[inicio];
+   inicio--;
+   fim++;
+   while(inicio<fim){
+      do fim--; while(v[fim]>x);
+      do inicio++; while(v[inicio]<x);
+      if(inicio<fim) troca(v[inicio], v[fim]);
+   }
+   return fim;
+}
+
 void Quick(int vetor[10], int inicio, int fim){
-        while(fim > 0 && inicio < vetor[fim-1]){
-        vetor[fim] = vetor[fim-1];
-        fim--;
-    }
-    vetor[fim] = inicio;
+        if(inicio>=fim) return;
+        int meio = particiona(vetor,inicio,fim);
+        Quick(vetor,inicio,meio);
+        Quick(vetor,meio+1,fim);
 }
