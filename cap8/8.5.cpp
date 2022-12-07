@@ -1,3 +1,5 @@
+// Dupla:  Gabriela Duarte Albornoz e Gilderlane de Alencar Sousa
+
 #include <string.h>
 #include <iostream>
 using namespace std;
