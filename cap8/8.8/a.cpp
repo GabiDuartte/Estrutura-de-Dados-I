@@ -26,5 +26,5 @@ void quick_sort(int v[], int p, int u){
 
 int main(){
     int v[] = {72,69,51,46,33,28,15};
-    quick_sort(v,2,7);
+    quick_sort(v,2,5);
 }
