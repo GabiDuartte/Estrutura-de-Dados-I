@@ -1,3 +1,6 @@
+// Dupla:  Gabriela Duarte Albornoz e Gilderlane de Alencar Sousa
+
+#include <stdio.h>
 #include <iostream>
 using namespace std;
 #define troca(a,b) {int x=a; a=b; b=x;}
